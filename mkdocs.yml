@@ -1,0 +1,7 @@
+site_name: gkaufman-dev
+theme:
+  name: dracula
+plugins:
+  - blog:
+      blog_dir: .
+      archive: false
