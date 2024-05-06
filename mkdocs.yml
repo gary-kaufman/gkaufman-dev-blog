@@ -1,6 +1,12 @@
 site_name: gkaufman-dev
 theme:
-  name: dracula
+  name: material
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: red
+nav:
+  - index.md
 plugins:
   - blog:
       blog_dir: .

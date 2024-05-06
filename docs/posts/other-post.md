@@ -1,10 +1,9 @@
 ---
-date: 2024-01-31
+date: 2024-05-06
 authors:
-  - squidfunk
+  - gary-kaufman
 categories:
-  - Hello
-  - World
+  - Hello World
 ---
 
 # Different Test
@@ -14,4 +13,4 @@ nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
 massa, nec semper lorem quam in massa.
 
 <!-- more -->
-...
+Here is the rest of the content of this post! Hazzah!
