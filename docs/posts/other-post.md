@@ -3,14 +3,12 @@ date: 2024-05-06
 authors:
   - gary-kaufman
 categories:
-  - Hello World
+  - Demo
 ---
 
-# Different Test
+# My MkDocs Demo Post
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-massa, nec semper lorem quam in massa.
+This is only a dummy post for me to test all the capabilities of [MkDocs](https://www.mkdocs.org/). Nothing here will be of major importance unless you are inspecting this project on GitHub.
 
 <!-- more -->
 Here is the rest of the content of this post! Hazzah!

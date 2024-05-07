@@ -1,11 +1,10 @@
 ---
 date: 2024-01-31
 categories:
-  - Hello
-  - World
+  - Hello World
 ---
 
-# Hello world
+# Hello World
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
 nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
