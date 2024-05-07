@@ -13,4 +13,4 @@ This is only a dummy post for me to test all the capabilities of [MkDocs](https:
 <!-- more -->
 Here is the rest of the content of this post! Hazzah!
 
-![Hello World Image](hello-world-image.png)
+![Hello World Image](../images/hello-world-image.png)

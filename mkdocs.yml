@@ -1,12 +1,15 @@
 site_name: gkaufman-dev
 theme:
   name: material
+  favicon: images/seadog-favicon.png
+  logo: images/seadog-round-crop.png
   palette:
     scheme: slate
     primary: deep purple
     accent: red
 nav:
   - index.md
+  - about-me.md
 plugins:
   - blog:
       blog_dir: .
