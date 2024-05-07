@@ -14,3 +14,5 @@ massa, nec semper lorem quam in massa.
 
 <!-- more -->
 Here is the rest of the content of this post! Hazzah!
+
+![Hello World Image](hello-world-image.png)
