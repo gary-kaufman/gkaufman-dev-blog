@@ -56,7 +56,7 @@ Unload Me
 End Sub
 ```
 
-Finally, click the green "Play" button in the VBA editor toolbar to run this UserForm to test it out.
+Finally, click the green "Play" button in the VBA editor toolbar to run this UserForm to test it out.  
 ![Click Green Play Button](../images/vba-userform-to-new-row/vba-click-play-button.png)  
 ![Submit Form](../images/vba-userform-to-new-row/testing-userform.png)  
 ![Success!](../images/vba-userform-to-new-row/success.png)  
