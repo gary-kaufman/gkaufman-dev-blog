@@ -29,7 +29,7 @@ End Sub
 Next, return to your Excel sheet, go to the Insert tab, and add a shape with whatever text you prefer.  
 ![Create button](../images/vba-open-userform-with-button/3.png)
 
-Right-click the button and select `Assign Macro`. From the window that pops up, select the `RunForm` macro that we just created.  
+Right-click the shape you created and select `Assign Macro`. From the window that pops up, select the `RunForm` macro that we just created.  
 ![Select RunForm](../images/vba-open-userform-with-button/4.png)
 
 You are all set! Now click the button and watch that magical UserForm appear! :sunglasses:
