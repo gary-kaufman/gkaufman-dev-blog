@@ -329,29 +329,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/hello-world/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hello World
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
       <a href="../../../../category/vba/" class="md-nav__link">
         
   
@@ -495,12 +472,12 @@
 <p>This guide will explain how to create a UserForm in VBA that takes its results directly to a new row in the Excel sheet.</p>
 <!-- more -->
 
-<p>With a row or two of data, add a header to a new column called <code>Target Row</code> and in the first cell use the <code>COUNTA</code><a href="" title="The COUNTA formula will count all rows with data in them."><sub>1</sub></a> formula on one of the
+<p>With a row or two of data, add a header to a new column called <code>Target Row</code> and in the first cell use the <code>COUNTA</code><a href="" title="The COUNTA formula will count all rows with data in them."><sup>a</sup></a> formula on one of the
 data columns:</p>
 <pre><code class="language-text">=COUNTA(B:B)
 </code></pre>
 <p><img alt="Target Row Formula" src="../../../../images/vba-userform-to-new-row/vba-create-target-row-with-formula.png" /></p>
-<p>First open VBA editor by going to the Developer Tab and selecting Visual Basic. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">1</a></sup>
+<p>First open VBA editor by going to the Developer Tab and selecting Visual Basic. <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>
 <img alt="Open VBA" src="../../../../images/vba-userform-to-new-row/open-vba-screenshot.png" />  </p>
 <p>Right click in the Project window and select: Insert &gt; UserForm.
 <img alt="Right Click &gt; Insert &gt; UserForm Image" src="../../../../images/vba-userform-to-new-row/right-click-insert-userform.png" /></p>
@@ -508,13 +485,13 @@ data columns:</p>
 <img alt="Create Labels, Textboxes, and CommandButton" src="../../../../images/vba-userform-to-new-row/vba-create-button-label-textbox.png" /></p>
 <p>Click each item and edit them accordingly with the Properties window that opens below the Project window.</p>
 <ul>
-<li>Label: Edit the <code>Caption</code> property to change the text in the label. <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">2</a></sup></li>
+<li>Label: Edit the <code>Caption</code> property to change the text in the label. <a href="" title="This is also a great opportunity to change the Font property to your liking."><sup>b</sup></a></li>
 <li>TextBox: Each TextBox must have a unique <code>Name</code> property to be referenced later.</li>
 <li>CommandButton: Edit the <code>Name</code> and <code>Caption</code> property to be referenced later.</li>
 </ul>
-<p>Double click your CommandButton <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">3</a></sup> and it will open up the code editor.</p>
+<p>Double click your CommandButton <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> and it will open up the code editor.</p>
 <p><img alt="Code Editor for Save CommandButton" src="../../../../images/vba-userform-to-new-row/double-click-save-button.png" /></p>
-<p>Inside the newly created <code>saveButton_Click()</code> function <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">4</a></sup>, add the following code. <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">5</a></sup></p>
+<p>Inside the newly created <code>saveButton_Click()</code> function <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>, add the following code. <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 <pre><code class="language-text">Private Sub saveButton_Click()
 
 Dim TargetRow As Integer
@@ -528,24 +505,25 @@ Unload Me
 End Sub
 </code></pre>
 <p>Finally, click the green "Play" button in the VBA editor toolbar to run this UserForm to test it out.
-<img alt="Click Green Play Button" src="../../../../images/vba-userform-to-new-row/vba-click-play-button.png" /></p>
+<img alt="Click Green Play Button" src="../../../../images/vba-userform-to-new-row/vba-click-play-button.png" /><br />
+<img alt="Submit Form" src="../../../../images/vba-userform-to-new-row/testing-userform.png" /><br />
+<img alt="Success!" src="../../../../images/vba-userform-to-new-row/success.png" />  </p>
+<p>I hope this was a quick and helpful guide! <img alt="😎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f60e.svg" title=":sunglasses:" /></p>
+<p>One of my main resources for this guide was the following <a href="https://www.youtube.com/playlist?list=PLpOAvcoMay5T5N02WwPbOvop4MBCw_JHE">YouTube playlist</a>.</p>
 <div class="footnote">
 <hr />
 <ol>
+<li id="fn:1">
+<p>You may need to enable the <code>Developer</code> tab by customizing your ribbon.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
 <li id="fn:2">
-<p>You may need to enable the <code>Developer</code> tab by customizing your ribbon.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>Double clicking a CommandButton will open up the Click event code, so this is what your code will do when you click it in Excel.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
-<p>This is also a great opportunity to change the <code>Font</code> property to your liking.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>This is not actually a function but a <a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/sub-statement">Sub</a> in VBA. It doesn't return anything.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:4">
-<p>Double clicking a CommandButton will open up the Click event code, so this is what your code will do when you click it in Excel.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 3 in the text">&#8617;</a></p>
-</li>
-<li id="fn:5">
-<p>This is not actually a function but a <a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/sub-statement">Sub</a> in VBA. It doesn't return anything.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 4 in the text">&#8617;</a></p>
-</li>
-<li id="fn:6">
-<p>So essentially this code adds the <code>firstNameInput</code> and <code>lastNameInput</code> to their respective cells based on the TargetRow that is set on the sheet. The statement selects the Sheet ("Sheet1"), then the Range ("A1" being the very first cell), then we use Offset move down to the TargetRow and use the correct number that corresponds with the column. Finally, Value is how we tell VBA to insert our input into this cell.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+<p>So essentially this code adds the <code>firstNameInput</code> and <code>lastNameInput</code> to their respective cells based on the TargetRow that is set on the sheet. The statement selects the Sheet ("Sheet1"), then the Range ("A1" being the very first cell), then we use Offset move down to the TargetRow and use the correct number that corresponds with the column. Finally, Value is how we tell VBA to insert our input into this cell.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
