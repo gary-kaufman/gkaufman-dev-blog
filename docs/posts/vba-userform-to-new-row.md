@@ -6,7 +6,7 @@ categories:
   - VBA
 ---
 
-# VBA: UserForm to a New Row
+# VBA: Add UserForm Results To a New Row
 
 This guide will explain how to create a UserForm in VBA that takes its results directly to a new row in the Excel sheet.
 
@@ -61,7 +61,11 @@ Finally, click the green "Play" button in the VBA editor toolbar to run this Use
 ![Submit Form](../images/vba-userform-to-new-row/testing-userform.png)  
 ![Success!](../images/vba-userform-to-new-row/success.png)  
 
+**Don't forget to save the file as `.xlsm` to enable macros so that your UserForm will run!**
+
 I hope this was a quick and helpful guide! :sunglasses:
+
+If you want to further utilize this UserForm, follow my other [guide](vba-open-userform-with-button.md) on how to create a button in Excel to open the UserForm!
 
 One of my main resources for this guide was the following [YouTube playlist](https://www.youtube.com/playlist?list=PLpOAvcoMay5T5N02WwPbOvop4MBCw_JHE).
 

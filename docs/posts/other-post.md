@@ -13,6 +13,8 @@ This is only a dummy post for me to test all the capabilities of [MkDocs](https:
 <!-- more -->
 Here is the rest of the content of this post! Hazzah! [~a~]("Check out this handy tooltip")
 
+You can check out my first actual post [here](vba-userform-to-new-row.md).
+
 ![Hello World Image](../images/hello-world-image.png)  
 
 [^1]: This is the very important footnote from above.
