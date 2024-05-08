@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../../06/my-mkdocs-demo-post/">
+        <link rel="prev" href="../../07/vba-add-userform-results-to-a-new-row/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>VBA: UserForm to a New Row - gkaufman-dev</title>
+        <title>VBA: Open UserForm With Button In Excel - gkaufman-dev</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vba-userform-to-a-new-row" class="md-skip">
+        <a href="#vba-open-userform-with-button-in-excel" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VBA: UserForm to a New Row
+              VBA: Open UserForm With Button In Excel
             
           </span>
         </div>
@@ -426,7 +426,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-05-07 00:00:00" class="md-ellipsis">May 7, 2024</time>
+                        <time datetime="2024-05-08 00:00:00" class="md-ellipsis">May 8, 2024</time>
                       </div>
                     </li>
                     
@@ -448,7 +448,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              3 min read
+                              2 min read
                             
                           </span>
                         </div>
@@ -468,65 +468,25 @@
         
 
 
-<h1 id="vba-userform-to-a-new-row">VBA: UserForm to a New Row</h1>
-<p>This guide will explain how to create a UserForm in VBA that takes its results directly to a new row in the Excel sheet.</p>
+<h1 id="vba-open-userform-with-button-in-excel">VBA: Open UserForm With Button In Excel</h1>
+<p>This guide will quickly explain how you can create a button in your Excel file that can open up a UserForm.</p>
 <!-- more -->
 
-<p>With a row or two of data, add a header to a new column called <code>Target Row</code> and in the first cell use the <code>COUNTA</code><a href="" title="The COUNTA formula will count all rows with data in them."><sup>a</sup></a> formula on one of the
-data columns:</p>
-<pre><code class="language-text">=COUNTA(B:B)
-</code></pre>
-<p><img alt="Target Row Formula" src="../../../../images/vba-userform-to-new-row/vba-create-target-row-with-formula.png" /></p>
-<p>First open VBA editor by going to the Developer Tab and selecting Visual Basic. <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>
-<img alt="Open VBA" src="../../../../images/vba-userform-to-new-row/open-vba-screenshot.png" />  </p>
-<p>Right click in the Project window and select: Insert &gt; UserForm.
-<img alt="Right Click &gt; Insert &gt; UserForm Image" src="../../../../images/vba-userform-to-new-row/right-click-insert-userform.png" /></p>
-<p>Use the toolbox to create a <strong>Label</strong> and <strong>TextBox</strong> for each field and a <strong>CommandButton</strong>.
-<img alt="Create Labels, Textboxes, and CommandButton" src="../../../../images/vba-userform-to-new-row/vba-create-button-label-textbox.png" /></p>
-<p>Click each item and edit them accordingly with the Properties window that opens below the Project window.</p>
-<ul>
-<li>Label: Edit the <code>Caption</code> property to change the text in the label. <a href="" title="This is also a great opportunity to change the Font property to your liking."><sup>b</sup></a></li>
-<li>TextBox: Each TextBox must have a unique <code>Name</code> property to be referenced later.</li>
-<li>CommandButton: Edit the <code>Name</code> and <code>Caption</code> property to be referenced later.</li>
-</ul>
-<p>Double click your CommandButton <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> and it will open up the code editor.</p>
-<p><img alt="Code Editor for Save CommandButton" src="../../../../images/vba-userform-to-new-row/double-click-save-button.png" /></p>
-<p>Inside the newly created <code>saveButton_Click()</code> function <sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>, add the following code. <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
-<pre><code class="language-text">Private Sub saveButton_Click()
-
-Dim TargetRow As Integer
-TargetRow = Sheet1.Range(&quot;C2&quot;)
-
-Sheet1.Range(&quot;A1&quot;).Offset(TargetRow, 0).Value = firstNameInput
-Sheet1.Range(&quot;A1&quot;).Offset(TargetRow, 1).Value = lastNameInput
-
-Unload Me
-
+<p>First you will need to create a new module in the VBA editor by right clicking the project window and selecting Insert &gt; Module.<br />
+<img alt="Insert new module" src="../../../../images/vba-open-userform-with-button/1.png" /></p>
+<p>Using the Properties window, rename the module as <code>modMain</code>.<br />
+<img alt="Rename module" src="../../../../images/vba-open-userform-with-button/2.png" /></p>
+<p>Inside the code window for the module, add the following replacing <code>UserForm1</code> with whatever the name of your UserForm is:</p>
+<pre><code class="language-text">Sub RunForm()
+UserForm1.Show
 End Sub
 </code></pre>
-<p>Finally, click the green "Play" button in the VBA editor toolbar to run this UserForm to test it out.
-<img alt="Click Green Play Button" src="../../../../images/vba-userform-to-new-row/vba-click-play-button.png" /><br />
-<img alt="Submit Form" src="../../../../images/vba-userform-to-new-row/testing-userform.png" /><br />
-<img alt="Success!" src="../../../../images/vba-userform-to-new-row/success.png" />  </p>
-<p>I hope this was a quick and helpful guide! <img alt="😎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f60e.svg" title=":sunglasses:" /></p>
-<p>One of my main resources for this guide was the following <a href="https://www.youtube.com/playlist?list=PLpOAvcoMay5T5N02WwPbOvop4MBCw_JHE">YouTube playlist</a>.</p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>You may need to enable the <code>Developer</code> tab by customizing your ribbon.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p>Double clicking a CommandButton will open up the Click event code, so this is what your code will do when you click it in Excel.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-<li id="fn:3">
-<p>This is not actually a function but a <a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/sub-statement">Sub</a> in VBA. It doesn't return anything.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
-</li>
-<li id="fn:4">
-<p>So essentially this code adds the <code>firstNameInput</code> and <code>lastNameInput</code> to their respective cells based on the TargetRow that is set on the sheet. The statement selects the Sheet ("Sheet1"), then the Range ("A1" being the very first cell), then we use Offset move down to the TargetRow and use the correct number that corresponds with the column. Finally, Value is how we tell VBA to insert our input into this cell.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+<p>Next, return to your Excel sheet, go to the Insert tab, and add a shape with whatever text you prefer.<br />
+<img alt="Create button" src="../../../../images/vba-open-userform-with-button/3.png" /></p>
+<p>Right-click the button and select <code>Assign Macro</code>. From the window that pops up, select the <code>RunForm</code> macro that we just created.<br />
+<img alt="Select RunForm" src="../../../../images/vba-open-userform-with-button/4.png" /></p>
+<p>You are all set! Now click the button and watch that magical UserForm appear! <img alt="😎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f60e.svg" title=":sunglasses:" /></p>
+<p><strong>Don't forget to save the file as <code>.xlsm</code> to enable macros so that your UserForm will run!</strong></p>
 
 
 
