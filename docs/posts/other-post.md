@@ -8,9 +8,11 @@ categories:
 
 # My MkDocs Demo Post
 
-This is only a dummy post for me to test all the capabilities of [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). Nothing here will be of major importance unless you are inspecting this project on GitHub.
+This is only a dummy post for me to test all the capabilities of [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). Nothing here will be of major importance unless you are inspecting this project on GitHub. [^1]
 
 <!-- more -->
-Here is the rest of the content of this post! Hazzah!
+Here is the rest of the content of this post! Hazzah! [~a~]("Check out this handy tooltip")
 
-![Hello World Image](../images/hello-world-image.png)
+![Hello World Image](../images/hello-world-image.png)  
+
+[^1]: This is the very important footnote from above.

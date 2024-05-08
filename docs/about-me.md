@@ -8,7 +8,7 @@ authors:
 
 Hi I'm Gary!  
 
-![pfp](images/gk-2023-circle-crop.png)  
+![pfp](images/assets/gk-2023-circle-crop.png)  
 
 I am an application developer based in Louisiana working in the various areas of development including front-end frameworks including React and Vue, as well as Kafka data pipelines and data visualizations with Python and Bokeh.  
 

@@ -1,8 +1,10 @@
 site_name: gkaufman-dev
 theme:
   name: material
-  favicon: images/seadog-favicon.png
-  logo: images/seadog-round-crop.png
+  features:
+    - content.tooltips
+  favicon: images/assets/seadog-favicon.png
+  logo: images/assets/seadog-round-crop.png
   palette:
     scheme: slate
     primary: deep purple
@@ -13,3 +15,14 @@ nav:
 plugins:
   - blog:
       blog_dir: .
+markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - footnotes
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
