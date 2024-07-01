@@ -3,12 +3,12 @@ theme:
   name: material
   features:
     - content.tooltips
-  favicon: images/assets/seadog-favicon.png
-  logo: images/assets/seadog-round-crop.png
+  favicon: images/assets/OIG1qnG6m.jpg
+  logo: images/assets/OIG1qnG6m.jpg
   palette:
     scheme: slate
-    primary: deep purple
-    accent: red
+    primary: blue grey
+    accent: cyan
 nav:
   - index.md
   - about-me.md
