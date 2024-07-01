@@ -12,6 +12,6 @@ Hi I'm Gary!
 
 I am an application developer based in Louisiana working in the various areas of development including front-end frameworks including React and Vue, as well as Kafka data pipelines and data visualizations with Python and Bokeh.  
 
-I love coding and hiking with my wife and our son!
+I love coding and hiking with my wife and our sons!
 
 Please check out my work on my [GitHub](https://github.com/gary-kaufman)!
