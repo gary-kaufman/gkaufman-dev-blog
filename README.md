@@ -10,6 +10,7 @@ This project uses [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](ht
 ## Local Development
 
 To work with my blog locally, I first install `mkdocs` with the following command.
+
 ```commandline
 pip install mkdocs mkdocs-material
 ```
