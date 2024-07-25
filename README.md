@@ -7,6 +7,15 @@ This project uses [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](ht
 - mkdocs
 - mkdocs-material
 
+## Local Development
+
+To work with my blog locally, I first install `mkdocs` with the following command.
+```commandline
+pip install mkdocs mkdocs-material
+```
+
+Then inside the source folder I run `mkdocs serve` to inspect my progress in a web browser.
+
 ## Deployment
 
 I used the command `mkdocs gh-deploy --force` to deploy directly to GitHub pages per the MkDocs documentation.

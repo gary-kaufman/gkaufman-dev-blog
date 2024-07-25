@@ -17,4 +17,8 @@ You can check out my first actual post [here](vba-userform-to-new-row.md).
 
 ![Hello World Image](../images/hello-world-image.png)  
 
+!!! note
+    Here is an important notice for me to remember!
+
 [^1]: This is the very important footnote from above.
+
