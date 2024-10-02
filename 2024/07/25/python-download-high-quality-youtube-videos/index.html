@@ -12,6 +12,8 @@
         <link rel="prev" href="../../../05/08/vba-open-userform-with-button-in-excel/">
       
       
+        <link rel="next" href="../../../10/02/openpyxl-my-favorite-features/">
+      
       
       <link rel="icon" href="../../../../images/assets/OIG1qnG6m.jpg">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
@@ -39,8 +41,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Play:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Play";--md-code-font:"JetBrains Mono"}</style>
       
     
     
@@ -366,6 +368,29 @@
 
               
             
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/openpyxl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    openpyxl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -501,14 +526,14 @@
 </div>
 <p>Firstly, you will need Python installed. You will also need the <a href="https://github.com/gary-kaufman/garys-pytube-video-downloader">GitHub repo</a> related to this project. Clone this repo locally.</p>
 <p>When opening the project in your favorite IDE/text editor (I used PyCharm) firstly, pip install the needed dependencies:</p>
-<pre><code class="language-commandline">pip install pytubefix
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install pytubefix
+</span></code></pre></div>
 <p>Now work your way to the <code>main.py</code> file to where you will replace the url with your selected video url:</p>
-<pre><code class="language-python">url = &quot;https://youtu.be/2jVBWyih-RU?si=Gne7gjpW_XlFIu5G&quot;
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://youtu.be/2jVBWyih-RU?si=Gne7gjpW_XlFIu5G&quot;</span>
+</span></code></pre></div>
 <p>Now add a breakpoint on the following line:</p>
-<pre><code class="language-python">yt.streams.filter()
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">yt</span><span class="o">.</span><span class="n">streams</span><span class="o">.</span><span class="n">filter</span><span class="p">()</span>
+</span></code></pre></div>
 <p>Now using an IDE, debug the programming, stopping on the above breakpoint. This will allow you to inspect the <code>yt</code> object.</p>
 <p>You are looking for the <code>itag_index</code> array that is nested in <code>yt</code> as <code>yt.streams.itag_index</code>.</p>
 <p><img alt="A gif to show how to find the itag" src="../../../../gifs/find_itag.gif" /></p>
@@ -516,9 +541,9 @@
 <p><img alt="Video File Image" src="../../../../images/python-youtube-download/video-file.png" />
 <img alt="Audio File Image" src="../../../../images/python-youtube-download/audio-file.png" /></p>
 <p>Now change the line of code with your selected <code>itag</code> and run the script, then do it again for the other file.</p>
-<pre><code class="language-python">    stream = yt.streams.get_by_itag(248)
-</code></pre>
-<p>After this, head into Clipchamp and import both files in the project.</p>
+<p><div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    <span class="n">stream</span> <span class="o">=</span> <span class="n">yt</span><span class="o">.</span><span class="n">streams</span><span class="o">.</span><span class="n">get_by_itag</span><span class="p">(</span><span class="mi">248</span><span class="p">)</span>
+</span></code></pre></div>
+After this, head into Clipchamp and import both files in the project.</p>
 <p><img alt="Place both files inside the project" src="../../../../images/python-youtube-download/add-files-to-project.png" /></p>
 <p>Then place them on the timeline together!</p>
 <p><img alt="Place media on timeline" src="../../../../images/python-youtube-download/place-files.png" /></p>
@@ -576,7 +601,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.tooltips"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.tooltips", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
